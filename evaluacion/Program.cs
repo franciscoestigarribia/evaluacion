@@ -7,14 +7,10 @@ paiiss = Cargarpais();
 
 Console.WriteLine("presione tecla para mostrar datos");
 Console.ReadKey();
+
 Console.Clear();
 
-
 mostrardatos();
-
-mostraestrategicos();
-
-
 
 void mostrardatos()
 {
@@ -25,29 +21,20 @@ void mostrardatos()
     {
         
         Console.WriteLine("    Provincia:");
-        Console.WriteLine("    Nombre: " + provin.Nombre);
-        Console.WriteLine("    Gobernador: " + provin.Gobernador);
-        Console.WriteLine("    Region: " + provin.Region);
+        Console.WriteLine($"    Nombre: {provin.Nombre}");
+        Console.WriteLine($"    Gobernador: {provin.Gobernador}");
+        Console.WriteLine($"    Region: {provin.Region}");
         foreach (Ciudad ciudad in provin.ciudades)
         {
             Console.WriteLine("       Ciudades:");
-            Console.WriteLine("       Nombre: " + ciudad.nombre);
-            Console.WriteLine("       Habitantes: " + ciudad.CantHabitantes);
-            Console.WriteLine("       Superficie: " + ciudad.Superficies);
+            Console.WriteLine($"       Nombre: {ciudad.nombre}");
+            Console.WriteLine($"       Habitantes: {ciudad.CantHabitantes}");
+            Console.WriteLine($"       Superficie: {ciudad.Superficies}");
         }
     }
 }
 
 
-void mostraestrategicos()
-{
-    Provincia provi = new();
-    foreach (Ciudad pobla in provi.ciudades)
-    {
-
-    }
-
-}
 
 Pais Cargarpais()
 {
